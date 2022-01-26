@@ -48,6 +48,9 @@ public class CollisionPainter : MonoBehaviour
             isShrinking = true;
             //StartCoroutine(ScaleDown(Vector3.zero, .1f));
         }
+
+        if (collision.gameObject.tag == "Paint")
+            paintMaterial.color = collision.gameObject.GetComponent<MeshRenderer>().material.color;
     }
 
     IEnumerator ScaleDown(Vector3 targetScale, float duration)

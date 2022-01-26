@@ -72,6 +72,8 @@ public class PaintTarget : MonoBehaviour
 
     public static void PaintObject(PaintTarget target, Vector3 point, Vector3 normal, Brush brush, Color meshMaterialColor, bool bucket)
     {
+        float oldSplatScale = brush.splatScale;
+
         if (bucket)
             brush.splatScale = 100000f;
 
@@ -105,6 +107,8 @@ public class PaintTarget : MonoBehaviour
         newPaint.brush = brush;
 
         target.PaintSplat(newPaint);
+
+        brush.splatScale = oldSplatScale;
     }
 
     public static void ClearAllPaint()
