@@ -13,16 +13,22 @@ public class WaterfallSphere : MonoBehaviour, IPooledObject
     [SerializeField]
     private Rigidbody rb;
 
+    private Vector3 originalScale;
+
     // Start is called before the first frame update
     private void Start()
     {
-        if(rb == null)
+        originalScale = new Vector3(1,1,1);
+
+        if (rb == null)
         {
             rb = GetComponent<Rigidbody>();
         }
     }
     public void OnObjectSpawn()
     {
+        transform.localScale = originalScale;
+
         float xSpeed = Random.Range(forceX.x, forceX.y);
         float ySpeed = Random.Range(forceY.x, forceY.y);
         float zSpeed = Random.Range(forceZ.x, forceZ.y);
