@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 1553571308768388562}
   - component: {fileID: 1675791211178190040}
   - component: {fileID: 1675958076747161494}
-  - component: {fileID: 1549714760080562172}
   m_Layer: 0
   m_Name: PS_Fire_ALPHA
   m_TagString: Untagged
@@ -4817,23 +4816,6 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
---- !u!114 &1549714760080562172
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1550485598830954944}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e763ac135c62a05428a04e24f4b55dfc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  debugMode: 0
-  debugVolumeValue: 1
-  particleEmmisionRate: 20
-  particleScale: 2.5
-  particleLifeTime: 2
 --- !u!1 &1550859935249350010
 GameObject:
   m_ObjectHideFlags: 0
@@ -9665,7 +9647,6 @@ GameObject:
   - component: {fileID: 1553889610486877912}
   - component: {fileID: 1676329996591757090}
   - component: {fileID: 1676016937834148092}
-  - component: {fileID: 1549714761333747924}
   m_Layer: 0
   m_Name: PS_Sparks
   m_TagString: Untagged
@@ -14471,23 +14452,6 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
---- !u!114 &1549714761333747924
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1551241319572757692}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e763ac135c62a05428a04e24f4b55dfc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  debugMode: 0
-  debugVolumeValue: 1
-  particleEmmisionRate: 20
-  particleScale: 0.15
-  particleLifeTime: 4
 --- !u!1 &1551344899114632164
 GameObject:
   m_ObjectHideFlags: 0
@@ -14499,7 +14463,6 @@ GameObject:
   - component: {fileID: 1553885645581912424}
   - component: {fileID: 1675881915322051588}
   - component: {fileID: 1676047285234604906}
-  - component: {fileID: 1549714760177360367}
   m_Layer: 0
   m_Name: PS_Fire_ADD
   m_TagString: Untagged
@@ -19305,23 +19268,6 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
---- !u!114 &1549714760177360367
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1551344899114632164}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e763ac135c62a05428a04e24f4b55dfc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  debugMode: 0
-  debugVolumeValue: 1
-  particleEmmisionRate: 20
-  particleScale: 1.75
-  particleLifeTime: 2
 --- !u!1 &1551385948685052994
 GameObject:
   m_ObjectHideFlags: 0
@@ -19333,7 +19279,6 @@ GameObject:
   - component: {fileID: 1553363866742059682}
   - component: {fileID: 1675823783064506874}
   - component: {fileID: 1676704356108996200}
-  - component: {fileID: 1549714759838766876}
   m_Layer: 0
   m_Name: PS_Glow
   m_TagString: Untagged
@@ -24139,20 +24084,3 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
---- !u!114 &1549714759838766876
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1551385948685052994}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e763ac135c62a05428a04e24f4b55dfc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  debugMode: 0
-  debugVolumeValue: 1
-  particleEmmisionRate: 15
-  particleScale: 4.5
-  particleLifeTime: 2

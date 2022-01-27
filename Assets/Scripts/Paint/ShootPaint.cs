@@ -14,7 +14,7 @@ public class ShootPaint : XRBaseInteractable
     [SerializeField]
     private ParticleSystem[] ps;
 
-    private ParticleSystem.MainModule[] psMain;
+    private ParticleSystem.MainModule[] psMain = new ParticleSystem.MainModule[4];
 
     private PaintTarget paintTarget;
     private AudioSource audioSource;
@@ -28,7 +28,6 @@ public class ShootPaint : XRBaseInteractable
             for (int i = 0; i < ps.Length; i++)
             {
                 psMain[i] = ps[i].main;
-                Debug.Log("test" + i);
             }
         }
 
