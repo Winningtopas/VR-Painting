@@ -1018,6 +1018,14 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "HidePallette",
+                    "type": "Button",
+                    "id": "65954562-d6b9-4925-b251-9d2ad2859b0f",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -1062,6 +1070,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "ExitBody",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f9cd9aa3-82bd-43ef-b19f-af0896d68350",
+                    "path": "*/{PrimaryButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "HidePallette",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

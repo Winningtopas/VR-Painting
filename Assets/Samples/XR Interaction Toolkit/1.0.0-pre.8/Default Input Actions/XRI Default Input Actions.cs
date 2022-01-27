@@ -1031,6 +1031,14 @@ public class @XRIDefaultInputActions : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""HidePallette"",
+                    ""type"": ""Button"",
+                    ""id"": ""65954562-d6b9-4925-b251-9d2ad2859b0f"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -1075,6 +1083,17 @@ public class @XRIDefaultInputActions : IInputActionCollection, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""ExitBody"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f9cd9aa3-82bd-43ef-b19f-af0896d68350"",
+                    ""path"": ""*/{PrimaryButton}"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""HidePallette"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -1183,6 +1202,7 @@ public class @XRIDefaultInputActions : IInputActionCollection, IDisposable
         m_XRICustomBindings_WalkHoldLeft = m_XRICustomBindings.FindAction("WalkHoldLeft", throwIfNotFound: true);
         m_XRICustomBindings_WalkHoldRight = m_XRICustomBindings.FindAction("WalkHoldRight", throwIfNotFound: true);
         m_XRICustomBindings_ExitBody = m_XRICustomBindings.FindAction("ExitBody", throwIfNotFound: true);
+        m_XRICustomBindings_HidePallette = m_XRICustomBindings.FindAction("HidePallette", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -1550,6 +1570,7 @@ public class @XRIDefaultInputActions : IInputActionCollection, IDisposable
     private readonly InputAction m_XRICustomBindings_WalkHoldLeft;
     private readonly InputAction m_XRICustomBindings_WalkHoldRight;
     private readonly InputAction m_XRICustomBindings_ExitBody;
+    private readonly InputAction m_XRICustomBindings_HidePallette;
     public struct XRICustomBindingsActions
     {
         private @XRIDefaultInputActions m_Wrapper;
@@ -1557,6 +1578,7 @@ public class @XRIDefaultInputActions : IInputActionCollection, IDisposable
         public InputAction @WalkHoldLeft => m_Wrapper.m_XRICustomBindings_WalkHoldLeft;
         public InputAction @WalkHoldRight => m_Wrapper.m_XRICustomBindings_WalkHoldRight;
         public InputAction @ExitBody => m_Wrapper.m_XRICustomBindings_ExitBody;
+        public InputAction @HidePallette => m_Wrapper.m_XRICustomBindings_HidePallette;
         public InputActionMap Get() { return m_Wrapper.m_XRICustomBindings; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -1575,6 +1597,9 @@ public class @XRIDefaultInputActions : IInputActionCollection, IDisposable
                 @ExitBody.started -= m_Wrapper.m_XRICustomBindingsActionsCallbackInterface.OnExitBody;
                 @ExitBody.performed -= m_Wrapper.m_XRICustomBindingsActionsCallbackInterface.OnExitBody;
                 @ExitBody.canceled -= m_Wrapper.m_XRICustomBindingsActionsCallbackInterface.OnExitBody;
+                @HidePallette.started -= m_Wrapper.m_XRICustomBindingsActionsCallbackInterface.OnHidePallette;
+                @HidePallette.performed -= m_Wrapper.m_XRICustomBindingsActionsCallbackInterface.OnHidePallette;
+                @HidePallette.canceled -= m_Wrapper.m_XRICustomBindingsActionsCallbackInterface.OnHidePallette;
             }
             m_Wrapper.m_XRICustomBindingsActionsCallbackInterface = instance;
             if (instance != null)
@@ -1588,6 +1613,9 @@ public class @XRIDefaultInputActions : IInputActionCollection, IDisposable
                 @ExitBody.started += instance.OnExitBody;
                 @ExitBody.performed += instance.OnExitBody;
                 @ExitBody.canceled += instance.OnExitBody;
+                @HidePallette.started += instance.OnHidePallette;
+                @HidePallette.performed += instance.OnHidePallette;
+                @HidePallette.canceled += instance.OnHidePallette;
             }
         }
     }
@@ -1663,5 +1691,6 @@ public class @XRIDefaultInputActions : IInputActionCollection, IDisposable
         void OnWalkHoldLeft(InputAction.CallbackContext context);
         void OnWalkHoldRight(InputAction.CallbackContext context);
         void OnExitBody(InputAction.CallbackContext context);
+        void OnHidePallette(InputAction.CallbackContext context);
     }
 }

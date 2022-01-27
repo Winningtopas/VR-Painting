@@ -23,6 +23,12 @@ public class CollisionPainter : MonoBehaviour
             paintMaterial = GetComponent<MeshRenderer>().material;
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Paint")
+            paintMaterial.color = other.GetComponent<MeshRenderer>().material.color;
+    }
+
     private void OnCollisionEnter(Collision collision)
     {
         HandleCollision(collision);

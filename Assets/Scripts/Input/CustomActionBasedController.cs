@@ -33,6 +33,14 @@ public class CustomActionBasedController : ActionBasedController
         set => SetInputActionProperty(ref m_ExitBodyAction, value);
     }
 
+    [SerializeField]
+    InputActionProperty m_HidePalletteAction;
+    public InputActionProperty hidePalletteAction
+    {
+        get => m_HidePalletteAction;
+        set => SetInputActionProperty(ref m_HidePalletteAction, value);
+    }
+
     //Copied directly from action based controller because changing the function to protected in the base class is not tracked by git.
     private void SetInputActionProperty(ref InputActionProperty property, InputActionProperty value)
     {

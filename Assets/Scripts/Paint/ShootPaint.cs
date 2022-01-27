@@ -5,12 +5,33 @@ using UnityEngine.InputSystem;
 using UnityEngine.XR.Interaction.Toolkit;
 
 [RequireComponent(typeof(PaintTarget))]
+[RequireComponent(typeof(AudioSource))]
+
 public class ShootPaint : XRBaseInteractable
 {
+    [SerializeField]
+    private bool hasFire;
+    [SerializeField]
+    private ParticleSystem[] ps;
+
+    private ParticleSystem.MainModule[] psMain;
+
     private PaintTarget paintTarget;
+    private AudioSource audioSource;
+
     private void Start()
     {
         paintTarget = GetComponent<PaintTarget>();
+        audioSource = GetComponent<AudioSource>();
+        if (ps != null)
+        {
+            for (int i = 0; i < ps.Length; i++)
+            {
+                psMain[i] = ps[i].main;
+                Debug.Log("test" + i);
+            }
+        }
+
     }
     protected override void OnSelectEntered(SelectEnterEventArgs args)
     {
@@ -26,5 +47,16 @@ public class ShootPaint : XRBaseInteractable
         Color color = collisionPainter.paintMaterial.color;
 
         PaintTarget.PaintObject(paintTarget, Vector3.zero, Vector3.zero, brush, color, true);
+        audioSource.Play();
+        if (hasFire)
+            ChangeParticleColors(color);
+    }
+
+    private void ChangeParticleColors(Color color)
+    {
+        for (int i = 0; i < psMain.Length; i++)
+        {
+            psMain[i].startColor = color;
+        }
     }
 }
