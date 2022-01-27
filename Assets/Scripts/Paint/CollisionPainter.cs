@@ -26,7 +26,10 @@ public class CollisionPainter : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Paint")
+        {
             paintMaterial.color = other.GetComponent<MeshRenderer>().material.color;
+            //PaintTarget.PaintObject(GetComponent<PaintTarget>(), Vector3.zero, Vector3.zero, brush, paintMaterial.color, true);
+        }
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -56,7 +59,10 @@ public class CollisionPainter : MonoBehaviour
         }
 
         if (collision.gameObject.tag == "Paint")
+        {
             paintMaterial.color = collision.gameObject.GetComponent<MeshRenderer>().material.color;
+            //PaintTarget.PaintObject(GetComponent<PaintTarget>(), Vector3.zero, Vector3.zero, brush, paintMaterial.color, true);
+        }
     }
 
     IEnumerator ScaleDown(Vector3 targetScale, float duration)

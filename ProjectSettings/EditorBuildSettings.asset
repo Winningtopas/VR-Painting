@@ -6,11 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/HUB-Scene.unity
-    guid: 501d31449f0620a4791784544caf4347
-  - enabled: 1
-    path: Assets/Scenes/EchoCave.unity
-    guid: b832d56cd713fe54584328f58b92db7f
+    path: Assets/Scenes/Test.unity
+    guid: ca2d3411e720cf64b86aaab68cac498d
   m_configObjects:
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 91c1da0bf92a67f4f9cddb5c1f382fe7, type: 2}
     com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 2309eeadf235bd841968f1c6ff255473, type: 2}

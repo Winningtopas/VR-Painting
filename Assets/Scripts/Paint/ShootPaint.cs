@@ -46,6 +46,13 @@ public class ShootPaint : XRBaseInteractable
         Color color = collisionPainter.paintMaterial.color;
 
         PaintTarget.PaintObject(paintTarget, Vector3.zero, Vector3.zero, brush, color, true);
+
+
+        GetComponent<MeshRenderer>().material.color = color;
+
+
+
+
         audioSource.Play();
         if (hasFire)
             ChangeParticleColors(color);
